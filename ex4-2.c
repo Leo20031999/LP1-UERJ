@@ -9,13 +9,13 @@ int todos_os_primos(int max){
 		}if(qtd==2){
 			printf("%d\n",max);
 		}
-		max--;
+		max-=1;
 		qtd=0;
 	}
 }
 int main(void){
 	int max;
-	printf("Digite um número: ");
+	printf("Digite um nÃºmero: ");
 	scanf("%d", &max);
 	int x=todos_os_primos(max);
 	return 0;
