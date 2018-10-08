@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 int main(void){
-	char time[3], mais[3], menos[3];
+	char time[20], mais[20], menos[20];
 	int i=1,vit,der,emp,pts,pmai=0,pmen=100;
-	while(i<=3){
+	while(i<=20){
 		printf("Nome do time %d:",i);
 		scanf("%s",time);
 		printf("Numero de vitorias:");
