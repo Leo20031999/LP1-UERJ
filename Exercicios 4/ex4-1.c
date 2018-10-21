@@ -4,7 +4,7 @@ int eh_primo(int n){
 	for(i=1;i<=n;i+=1){
 		if(n%i==0){
 			qtd+=1;
-			}
+		}
     }if(qtd==2){
         return 1;
     }else{
@@ -17,7 +17,7 @@ int main(void){
     scanf("%d", &n);
     int x=eh_primo(n);
     if (eh_primo(n)==1){
-    	printf("Não é primo.");
+    	printf("NÃ£o Ã© primo.");
 	}else{
 		printf("primo.");
 	}
