@@ -41,11 +41,11 @@ void mapa(struct pers* p, int n){
 	}
 }
 int main(void){
-	struct pers per[3];
+	struct pers per[10];
 	int i;
 	for (i=0;i<3;i+=1){
 		preenche2(&per[i]);
 	}
-	mapa(per,3);
+	mapa(per,10);
 	return 0;
 }
