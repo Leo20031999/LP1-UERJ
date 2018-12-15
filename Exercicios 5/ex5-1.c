@@ -8,10 +8,10 @@ int main(void){
 	scanf("%d", &b);
 	printf("%d %d\n", a,b);
 	if (a>b){
-		int *p=&a;
+		*p=&a;
 		*p=a-50;
 	}else{
-		int *p=&b;
+		*p=&b;
 		*p=b-50;
 }
 	printf("%d %d\n", a,b);
