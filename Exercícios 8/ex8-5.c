@@ -53,7 +53,7 @@ int main (void){
 		fwrite(&p1.xp,sizeof(int),1,f);
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
-		fwrite(&p1.s.dan.mag,sizeof(int),1,f);
+		fwrite(&p1.s.dan.mag+&p1.str,sizeof(int),1,f);
 	}
 	if(esc==2){
 		fwrite(&p1.hp,sizeof(int),1,f);
@@ -62,7 +62,7 @@ int main (void){
 		fwrite(&p1.xp,sizeof(int),1,f);
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
-		fwrite(&p1.s.dan.fis,sizeof(int),1,f);
+		fwrite(&p1.s.dan.fis+&p1.str,sizeof(int),1,f);
 	}
 	fclose(f);
 	FILE* g=fopen("/home/ime/personagem.txt","rb");
@@ -74,7 +74,7 @@ int main (void){
 		fwrite(&p1.xp,sizeof(int),1,f);
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
-		fwrite(&p1.s.dan.mag,sizeof(int),1,f);
+		fwrite(&p1.s.dan.mag+&p1.str,sizeof(int),1,f);
 		printf("Status do personagem;\nVida:%i\nStamina:%i\nForça:%i\nExperiencia:%i\n",p1.hp,p1.sta,p1.str,p1.xp);
 		printf("Status negativos;\nEnvenenamento:%i\nSangramento:%i\n",p1.s.poi,p1.s.ble);
 		printf("PODER MAGICO: %i",p1.s.dan.mag+p1.str);
@@ -86,7 +86,7 @@ int main (void){
 		fwrite(&p1.xp,sizeof(int),1,f);
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
-		fwrite(&p1.s.dan.fis,sizeof(int),1,f);
+		fwrite(&p1.s.dan.fis+&p1.str,sizeof(int),1,f);
 		printf("Status do personagem;\nVida:%i\nStamina:%i\nForça:%i\nExperiencia:%i\n",p1.hp,p1.sta,p1.str,p1.xp);
 		printf("Status negativos;\nEnvenenamento:%i\nSangramento:%i\n",p1.s.poi,p1.s.ble);
 		printf("PODER FISICO: %i",p1.s.dan.fis+p1.str);
