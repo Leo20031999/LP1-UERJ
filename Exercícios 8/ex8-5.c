@@ -33,7 +33,7 @@ void preenche(struct personagem* p,int esc){
 	scanf("%i",&p->hp);
 	printf("Digite a estamina: ");
 	scanf("%i",&p->sta);
-	printf("Digite a força: ");
+	printf("Digite a forÃ§a: ");
 	scanf("%i",&p->str);
 	printf("Digite a experiencia: ");
 	scanf("%i",&p->xp);
@@ -41,7 +41,7 @@ void preenche(struct personagem* p,int esc){
 }
 int main (void){
 	int esc;
-	printf("Qual reduçao do atributo do personagem: mago/guerreiro[1/2]?");
+	printf("Qual reduÃ§ao do atributo do personagem: mago/guerreiro[1/2]?");
 	scanf("%i",&esc);
 	struct personagem p1;
 	FILE* f=fopen("/home/ime/personagem.txt","wb");
@@ -62,7 +62,7 @@ int main (void){
 		fwrite(&p1.xp,sizeof(int),1,f);
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
-		fwrite(&p1.s.dan.mag,sizeof(int),1,f);
+		fwrite(&p1.s.dan.fis,sizeof(int),1,f);
 	}
 	fclose(f);
 	FILE* g=fopen("/home/ime/personagem.txt","rb");
@@ -75,7 +75,7 @@ int main (void){
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
 		fwrite(&p1.s.dan.mag,sizeof(int),1,f);
-		printf("Status do personagem;\nVida:%i\nStamina:%i\nForça:%i\nExperiencia:%i\n",p1.hp,p1.sta,p1.str,p1.xp);
+		printf("Status do personagem;\nVida:%i\nStamina:%i\nForÃ§a:%i\nExperiencia:%i\n",p1.hp,p1.sta,p1.str,p1.xp);
 		printf("Status negativos;\nEnvenenamento:%i\nSangramento:%i\n",p1.s.poi,p1.s.ble);
 		printf("PODER MAGICO: %i",p1.s.dan.mag+p1.str);
 	}
@@ -87,7 +87,7 @@ int main (void){
 		fwrite(&p1.s.ble,sizeof(int),1,f);
 		fwrite(&p1.s.poi,sizeof(int),1,f);
 		fwrite(&p1.s.dan.fis,sizeof(int),1,f);
-		printf("Status do personagem;\nVida:%i\nStamina:%i\nForça:%i\nExperiencia:%i\n",p1.hp,p1.sta,p1.str,p1.xp);
+		printf("Status do personagem;\nVida:%i\nStamina:%i\nForÃ§a:%i\nExperiencia:%i\n",p1.hp,p1.sta,p1.str,p1.xp);
 		printf("Status negativos;\nEnvenenamento:%i\nSangramento:%i\n",p1.s.poi,p1.s.ble);
 		printf("PODER FISICO: %i",p1.s.dan.fis+p1.str);
 	}
