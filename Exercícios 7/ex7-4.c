@@ -22,9 +22,9 @@ void preenche2(struct pers* p){
 	p->score=0;
 }
 int main(void){
-	struct pers per[3];
+	struct pers per[10];
 	int i;
-	for (i=0;i<3;i+=1){
+	for (i=0;i<10;i+=1){
 		preenche2(&per[i]);
 	}
 	return 0;
