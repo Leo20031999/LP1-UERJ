@@ -18,6 +18,7 @@ void strjoin(char* d, char* o1, char* o2){
 	for (j=i,i=0;j<(i2+i1);i+=1,j+=1){
 		*(d+j)=*(o2+i);
 	}
+	*(d+(i1+i2))='\0';
 }
 int main(void){
 	char string1[20];
