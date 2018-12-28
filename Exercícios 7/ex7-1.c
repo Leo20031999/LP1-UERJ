@@ -10,7 +10,7 @@ void preenche(struct personagem* p){
 	scanf("%i",&p->hp);
 	printf("Digite a estamina: ");
 	scanf("%i",&p->sta);
-	printf("Digite a força: ");
+	printf("Digite a forÃ§a: ");
 	scanf("%i",&p->str);
 	printf("Digite a experiencia: ");
 	scanf("%i",&p->xp);
@@ -18,6 +18,6 @@ void preenche(struct personagem* p){
 int main (void){
 	struct personagem p1;
 	preenche(&p1);
-	printf("Status do personagem;\nVida:%i\nStamina:%i\nForça:\nExperiencia:%i",p1.hp,p1.sta,p1.str,p1.xp);
+	printf("Status do personagem;\nVida:%i\nStamina:%i\nForÃ§a:%i\nExperiencia:%i",p1.hp,p1.sta,p1.str,p1.xp);
 	return 0;
 }
