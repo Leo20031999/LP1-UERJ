@@ -1,0 +1,2 @@
+LP1-segunda,quarta,sexta,
+AED1-terca,quinta,
